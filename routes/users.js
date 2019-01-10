@@ -3,10 +3,14 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  var ip = req.headers['x-real-ip'] ? req.headers['x-real-ip'] : req.ip.replace(/::ffff:/, '');
+
+  var msg = "respond with a resouorce:"+ip;
+
+  res.send(msg);
 });
 
-router.get('/users',function(req,res,next){
+router.get('/list',function(req,res,next){
   res.send('return all users');
 })
 
