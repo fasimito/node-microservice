@@ -2,4 +2,4 @@
 
 This is just a nodejs based microservice framework.
 
-persistent updating
+persistent updating the project
